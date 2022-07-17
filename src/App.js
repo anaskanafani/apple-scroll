@@ -6,13 +6,15 @@ import "./App.css";
 function App() {
   useEffect(() => {
     const html = document.documentElement;
-    const canvas = document.getElementById("canvas");
+    const canvas = document.getElementById("canvas2");
     const context = canvas.getContext("2d");
-
     const currentFrame = (index) =>
       `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index
         .toString()
         .padStart(4, "0")}.jpg`;
+      // require(`./images/airpod-${index
+      //   .toString()
+      //   .padStart(4, "0")}.jpg`);
 
     const preloadImages = () => {
       for (let i = 1; i < frameCount; i++) {
@@ -69,6 +71,7 @@ function App() {
         </Scene>
       </Controller>
       <canvas id="canvas"></canvas>
+      <canvas id="canvas2"></canvas>
     </>
   );
 }
